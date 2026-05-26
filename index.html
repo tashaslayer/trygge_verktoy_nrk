@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRK Ressurser for Korrespondenter</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Material Symbols for icons (matching the presentation) -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        nrk: {
+                            blue: '#0085FF',
+                            dark: '#1A1A1A',
+                            light: '#F5F5F5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Sikrer at ikonene lastes pent */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-nrk-light text-nrk-dark antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex items-center gap-3">
+                <!-- Viser en enkel NRK-aktig sirkel som logo-plassholder -->
+                <div class="w-10 h-10 bg-nrk-blue text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    NRK
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900">Trygge verktøy</h1>
+                    <p class="text-sm text-gray-500">For URIX og korrespondenter</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        
+        <div class="mb-10 text-center max-w-2xl mx-auto">
+            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 mb-4">Verktøykassa for felt og desk</h2>
+            <p class="text-lg text-gray-600">
+                Her finner du en samling av de viktigste interne ressursene og trygge KI-verktøyene godkjent for bruk. 
+                <strong class="font-medium text-gray-900">Tips:</strong> Bokmerk denne siden (Ctrl+D / Cmd+D) så har du den alltid for hånden!
+            </p>
+        </div>
+
+        <!-- Grid for verktøy -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Kort 1: Skvalder -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-blue-50 text-nrk-blue rounded-xl">
+                        <span class="material-symbols-outlined text-3xl">record_voice_over</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Skvalder</h3>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Verktøy for transkribering med KI og Skvaldrek. Raskt og effektivt for å få tekst ut av intervjuer og opptak.
+                </p>
+                <div class="mt-auto">
+                    <a href="https://portalen.nrk.no/transkribering-med-ki/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-medium transition-colors">
+                        Gå til Skvalder på Portalen
+                        <span class="material-symbols-outlined text-sm ml-2">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kort 2: Gemini -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-purple-50 text-purple-600 rounded-xl">
+                        <span class="material-symbols-outlined text-3xl">auto_awesome</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Gemini</h3>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Vår trygge KI-assistent. Her finner du også offisielle NRK-gems som er skreddersydd for våre spesifikke behov.
+                </p>
+                <div class="mt-auto flex flex-col sm:flex-row gap-3">
+                    <a href="https://gemini.google.com/app" target="_blank" rel="noopener noreferrer" 
+                       class="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-nrk-blue hover:bg-blue-600 text-white rounded-lg font-medium transition-colors">
+                        Åpne Gemini
+                        <span class="material-symbols-outlined text-sm ml-2">open_in_new</span>
+                    </a>
+                    <a href="https://portalen.nrk.no/offisielle-nrk-gems/" target="_blank" rel="noopener noreferrer" 
+                       class="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-medium transition-colors">
+                        NRK-Gems
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kort 3: Notebook & Audio -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-green-50 text-green-600 rounded-xl">
+                        <span class="material-symbols-outlined text-3xl">description</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Notebook & Audio</h3>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    Smarte verktøy for organisering av store mengder research (NotebookLM) og dyptgående podkastsøk (Listen Notes).
+                </p>
+                <div class="mt-auto flex flex-col sm:flex-row gap-3">
+                    <a href="https://notebooklm.google.com/" target="_blank" rel="noopener noreferrer" 
+                       class="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-medium transition-colors">
+                        NotebookLM
+                        <span class="material-symbols-outlined text-sm ml-2">open_in_new</span>
+                    </a>
+                    <a href="https://www.listennotes.com/" target="_blank" rel="noopener noreferrer" 
+                       class="flex-1 inline-flex items-center justify-center px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-medium transition-colors">
+                        Listen Notes
+                        <span class="material-symbols-outlined text-sm ml-2">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kort 4: Stemmearkivet -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="p-3 bg-red-50 text-red-500 rounded-xl">
+                        <span class="material-symbols-outlined text-3xl">mic</span>
+                    </div>
+                    <h3 class="text-xl font-bold">Stemmearkivet</h3>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">
+                    NRKs interne arkiv for stemmer. Et uunnværlig verktøy for å finne eller verifisere historiske og aktuelle stemmer.
+                </p>
+                <div class="mt-auto">
+                    <a href="https://stemmearkivet.intern.nrkbeta.no/" target="_blank" rel="noopener noreferrer" 
+                       class="inline-flex items-center justify-center w-full px-4 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-900 border border-gray-300 rounded-lg font-medium transition-colors">
+                        Gå til Stemmearkivet
+                        <span class="material-symbols-outlined text-sm ml-2">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p class="text-sm text-gray-500">
+                Laget for URIX og NRKs utenrikskorrespondenter.
+            </p>
+            <p class="text-sm text-gray-500 flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">lock</span>
+                Kun godkjente, trygge lenker.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
